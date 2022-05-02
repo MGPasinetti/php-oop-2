@@ -1,32 +1,13 @@
 <?php
 
-class Cart {
-    private $items;
-    private $total;
+class Order {
 
-    public function __construct() {
-        $this->items = [];
-        $this->total = 0.00;
-    }
-
-    public function setItems($items) {
-        $this->items = $items;
-    }
-
-    public function setTotal($value) {
-        $this->total = $value;
-    }
-
-    public function getItems() {
-        return $this->items;
-    }
-
-    public function getTotal() {
-        return $this->total;
-    }
-
-    private function hasItems() {
-        return ( count( $this->items ) > 0 );
+    public function __construct($id, Cart $cart, Customer $customer) {
+        $this->id = strtoupper($id);
+        $this->cart = $cart;
+        $this->customer = $customer;
+        $this->total = $this->cart->getTotal();
+        $this->status = 0;
     }
 }
 
