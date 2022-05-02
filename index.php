@@ -10,6 +10,11 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 -->
 
 <?php
+include_once __DIR__ . '/classes/Product.php';
 
+$new_product = new Product(null, 'Test', 'Lorem ipsum', 10.50, 'Acme', 'image.jpg');
+$new_product_2 = new Product(null, 'Test2', 'Lorem ipsum few', 11, 'Acme2', 'image2.jpg');
+
+var_dump($new_product, $new_product_2);
 ?>
 
