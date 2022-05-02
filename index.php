@@ -10,11 +10,19 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 -->
 
 <?php
+
 include_once __DIR__ . '/classes/Product.php';
+include_once __DIR__ . '/classes/Accessory.php';
+include_once __DIR__ . '/classes/Food.php';
+include_once __DIR__ . '/classes/Kennel.php';
+include_once __DIR__ . '/classes/Toy.php';
 
 $new_product = new Product(null, 'Test', 'Lorem ipsum', 10.50, 'Acme', 'image.jpg');
 $new_product_2 = new Product(null, 'Test2', 'Lorem ipsum few', 11, 'Acme2', 'image2.jpg');
 
-var_dump($new_product, $new_product_2);
+$new_accesory = new Accessory(null, 'Guinzaglio', 'lorem ipsum', 15, 'dsfwef', 'image.jpg', 'very good');
+
+var_dump($new_product, $new_product_2, $new_accesory);
+
 ?>
 
